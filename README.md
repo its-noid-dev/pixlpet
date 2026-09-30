@@ -50,4 +50,4 @@ You can then respawn PIXL.
 
 A Windows `.exe` version is available in the releases/build files.
 
-
+https://github.com/its-noid-dev/pixlpet/releases/tag/releas
