@@ -1,53 +1,116 @@
-# 🐾 PIXL Pet
+# PIXL Pet
 
 PIXL Pet is a small virtual pet game made with Python and Pygame.
 
-You can take care of PIXL by feeding, playing and sleeping.
+Take care of PIXL by feeding, playing and letting PIXL sleep. Keep the stats high and make sure PIXL stays alive.
 
-##  Game
+## Game
 
 ![PIXL Pet](assets/game.png)
 
-##  Stats
+## Stats
 
 PIXL has 3 stats:
 
--  Hunger
--  Happiness
--  Energy
+- Hunger
+- Happiness
+- Energy
 
-You need to keep PIXL alive by taking care of these stats.
+You need to keep these stats high to keep PIXL alive.
 
+## Actions
 
-###  Feed
+### Feed
 
-Give PIXL some food and increase hunger.
+Give PIXL some food to increase hunger.
 
-
-###  Play
+### Play
 
 Play with PIXL to increase happiness.
 
-###  Sleep
+Playing also uses energy.
 
-Let PIXL sleep to get more energy.
+### Sleep
 
-##  Death
+Let PIXL sleep to increase energy.
+
+Sleeping also decreases hunger.
+
+## Death
 
 If hunger or energy reaches 0, PIXL dies.
 
-You can then respawn PIXL.
+When PIXL dies, the buttons disappear and a respawn button appears.
 
+Click the respawn button to start again with all stats at 100.
 
-##  Made with
+## Build Locally
 
-- Python
+### Requirements
+
+You need:
+
+- Windows
+- Python 3.13 or newer
+- Git
 - Pygame
-- Piskel
-- VS Code
+- PyInstaller
 
-##  Windows
+### 1. Clone the repository
 
-A Windows `.exe` version is available in the releases/build files.
+Open PowerShell and run:
 
-https://github.com/its-noid-dev/pixlpet/releases/tag/releas
+```powershell
+git clone https://github.com/its-noid-dev/pixlpet.git
+
+
+Then enter the project folder:
+
+cd pixlpet
+2. Create a virtual environment
+
+Create a Python virtual environment:
+
+python -m venv .venv
+3. Activate the virtual environment
+
+Activate the virtual environment:
+
+.\.venv\Scripts\Activate.ps1
+
+If activation worked, you should see (.venv) at the start of your PowerShell line.
+
+4. Install Pygame
+
+Install Pygame:
+
+pip install pygame
+5. Run PIXL Pet
+
+Start the game with:
+
+python main.py
+
+The PIXL Pet game window should open.
+
+Build the Windows .exe
+1. Install PyInstaller
+
+Install PyInstaller inside the virtual environment:
+
+pip install pyinstaller
+2. Build the .exe
+
+Run:
+
+pyinstaller --onefile --windowed --add-data "assets;assets" main.py
+
+PyInstaller will create a build folder, a dist folder and a .spec file.
+
+3. Find the .exe
+
+The finished Windows executable will be located at:
+
+dist/main.exe
+
+You can double-click main.exe to start PIXL Pet without opening Python.
