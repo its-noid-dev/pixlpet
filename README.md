@@ -62,34 +62,39 @@ Open PowerShell and run:
 
 ```powershell
 git clone https://github.com/its-noid-dev/pixlpet.git
+```
 
 
 Then enter the project folder:
-
+```
 cd pixlpet
+```
 2. Create a virtual environment
 
 Create a Python virtual environment:
-
+```
 python -m venv .venv
+```
 3. Activate the virtual environment
 
 Activate the virtual environment:
-
+```
 .\.venv\Scripts\Activate.ps1
-
+```
 If activation worked, you should see (.venv) at the start of your PowerShell line.
 
 4. Install Pygame
 
 Install Pygame:
-
+```
 pip install pygame
+```
 5. Run PIXL Pet
 
 Start the game with:
-
+```
 python main.py
+```
 
 The PIXL Pet game window should open.
 
@@ -97,14 +102,15 @@ Build the Windows .exe
 1. Install PyInstaller
 
 Install PyInstaller inside the virtual environment:
-
+```
 pip install pyinstaller
+```
 2. Build the .exe
 
 Run:
-
+```
 pyinstaller --onefile --windowed --add-data "assets;assets" main.py
-
+```
 PyInstaller will create a build folder, a dist folder and a .spec file.
 
 3. Find the .exe
